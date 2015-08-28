@@ -54,6 +54,7 @@ function clear() {
 
 function drawAll() {
   clear();
+  playerMove();
   drawEnemy();
   if (alive === true) {
     drawPlayer();
@@ -88,12 +89,10 @@ http://www.fengfly.com/plus/view-40190-1.html
 */
 $(document).keydown(e => {
   keyList[e.keyCode] = true;
-  playerMove();
 });
 
 $(document).keyup(e => {
   keyList[e.keyCode] = false;
-  playerMove();
 });
 
 function playerMove() {
